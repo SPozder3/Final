@@ -1,3 +1,5 @@
+from sys import argv
+
 data = open("movies.csv", 'r')
 lines = data.readlines()
 
@@ -19,6 +21,7 @@ def Your_Genre(lines):
 
 	if len(titles) == 0:
 		return "Sorry, there are no movies with the genre",genre_answer,"try again."
+		sys.exit(argv)
 	else:
 		print "Here are movies with that genre!"
 		return titles
